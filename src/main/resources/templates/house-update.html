@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Create house</title>
+</head>
+<body>
+<form action="#" th:action="@{/house-update}" th:object="${house}" method="post">
+  <label for="id">ID</label>
+  <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+  <br/>
+
+
+  <label for="numberOfFloors">numberOfFloors</label>
+  <input type="text" th:field="*{numberOfFloors}" id="numberOfFloors" placeholder="numberOfFloors">
+  <br/>
+  <label for="numberOfEntrances">numberOfEntrances</label>
+  <input type="text" th:field="*{numberOfEntrances}" id="numberOfEntrances" placeholder="numberOfEntrances">
+  <br/>
+  <label for="material">material</label>
+  <input type="text" th:field="*{material}" id="material" placeholder="material">
+  <br/>
+  <label for="color">color</label>
+  <input type="text" th:field="*{color}" id="color" placeholder="color">
+  <br/>
+  <label for="houseCondition">houseCondition</label>
+  <input type="text" th:field="*{houseCondition}" id="houseCondition" placeholder="houseCondition">
+  <br/>
+  <label for="streetId">streetId</label>
+  <input type="number" th:field="*{streetId}" id="streetId" placeholder="streetId">
+  <br/>
+
+  <input type="submit" value="Update User">
+</form>
+</body>
+</html>

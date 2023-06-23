@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create flat</title>
+</head>
+<body>
+<form action="#" th:action="@{/flat-create}" th:object="${flat}" method="post">
+
+
+    <label for="numberOfRooms">numberOfRooms</label>
+    <input type="text" th:field="*{numberOfRooms}" id="numberOfRooms" placeholder="numberOfRooms">
+    <label for="floor">floor</label>
+    <input type="text" th:field="*{floor}" id="floor" placeholder="floor">
+    <label for="price">price</label>
+    <input type="text" th:field="*{price}" id="price" placeholder="price">
+    <label for="ceilingHeight">ceilingHeight</label>
+    <input type="text" th:field="*{ceilingHeight}" id="ceilingHeight" placeholder="ceilingHeight">
+    <label for="apartmentArea">apartmentArea</label>
+    <input type="text" th:field="*{apartmentArea}" id="apartmentArea" placeholder="apartmentArea">
+    <label for="houseId">houseId</label>
+    <input type="text" th:field="*{houseId}" id="houseId" placeholder="houseId">
+
+    <input type="submit" value="Create Flat">
+</form>
+</body>
+</html>

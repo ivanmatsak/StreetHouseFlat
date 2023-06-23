@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Create flat</title>
+</head>
+<body>
+<form action="#" th:action="@{/flat-update}" th:object="${flat}" method="post">
+  <label for="id">ID</label>
+  <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+  <br/>
+
+  <label for="numberOfRooms">numberOfRooms</label>
+  <input type="text" th:field="*{numberOfRooms}" id="numberOfRooms" placeholder="numberOfRooms">
+  <br/>
+  <label for="floor">floor</label>
+  <input type="text" th:field="*{floor}" id="floor" placeholder="floor">
+  <br/>
+  <label for="price">price</label>
+  <input type="text" th:field="*{price}" id="price" placeholder="price">
+  <br/>
+  <label for="ceilingHeight">ceilingHeight</label>
+  <input type="text" th:field="*{ceilingHeight}" id="ceilingHeight" placeholder="ceilingHeight">
+  <br/>
+  <label for="apartmentArea">apartmentArea</label>
+  <input type="text" th:field="*{apartmentArea}" id="apartmentArea" placeholder="apartmentArea">
+  <br/>
+  <label for="houseId">houseId</label>
+  <input type="text" th:field="*{houseId}" id="houseId" placeholder="houseId">
+  <br/>
+
+  <input type="submit" value="Update Flat">
+</form>
+</body>
+</html>

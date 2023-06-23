@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="UTF-8">
+<title>Create street</title>
+</head>
+<body>
+<form action="#" th:action="@{/street-update}" th:object="${street}" method="post">
+  <label for="id">ID</label>
+  <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+  <br/>
+
+  <label for="name">Name</label>
+  <input type="text" th:field="*{name}" id="name" placeholder="Name">
+  <br/>
+  <label for="length">Length</label>
+  <input type="number" th:field="*{length}" id="length" placeholder="Length">
+  <br/>
+  <label for="isNarrow">isNarrow</label>
+  <input type="text" th:field="*{isNarrow}" id="isNarrow" placeholder="Is narrow">
+  <br/>
+  <label for="isNoisy">isNoisy</label>
+  <input type="text" th:field="*{isNoisy}" id="isNoisy" placeholder="Is noisy">
+  <br/>
+  <label for="distanceFromMetro">distanceFromMetro</label>
+  <input type="number" th:field="*{distanceFromMetro}" id="distanceFromMetro" placeholder="distanceFromMetro">
+  <br/>
+
+
+
+  <input type="submit" value="Update Street">
+</form>
+</body>
+</html>

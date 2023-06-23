@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Flats</title>
+</head>
+<body>
+<div th:switch="${flats}">
+  <h2 th:case="null">No flats found!</h2>
+  <div th:case="*">
+    <h2>Flats</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>numberOfRooms</th>
+        <th>floor</th>
+        <th>price</th>
+        <th>ceilingHeight</th>
+        <th>apartmentArea</th>
+        <th>houseId</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="flat : ${flats}">
+        <td th:text="${flat.id}"></td>
+        <td th:text="${flat.numberOfRooms}"></td>
+        <td th:text="${flat.floor}"></td>
+        <td th:text="${flat.price}"></td>
+        <td th:text="${flat.ceilingHeight}"></td>
+        <td th:text="${flat.apartmentArea}"></td>
+        <td th:text="${flat.houseId}"></td>
+        <td><a th:href="@{flat-update/{id}(id=${flat.id})}">Edit</a></td>
+        <td><a th:href="@{flat-delete/{id}(id=${flat.id})}">Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><a href="/flat-create">Create flat</a></p>
+</div>
+</body>
+</html>

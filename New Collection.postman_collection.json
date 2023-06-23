@@ -1,0 +1,1050 @@
+{
+	"info": {
+		"_postman_id": "2522b1c0-9c37-4dfa-baa4-aa8aecce01db",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Street",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "GET get list of streets",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/streets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"streets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 22 Jun 2023 23:40:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Streets</title>\n    </head>\n    <body>\n        <div>\n            <div>\n                <h2>Streets</h2>\n                <table>\n                    <thead>\n                        <tr>\n                            <th>Name</th>\n                            <th>Length</th>\n                            <th>Is narrow</th>\n                            <th>Is noisy</th>\n                            <th>Distance from metro</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>2</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td>true</td>\n                            <td>true</td>\n                            <td>1</td>\n                            <td>\n                                <a href=\"street-update/2\">Edit</a>\n                            </td>\n                            <td>\n                                <a href=\"street-delete/2\">Delete</a>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n            <p>\n                <a href=\"/street-create\">Create street</a>\n            </p>\n        </div>\n    </body>\n</html>"
+				},
+				{
+					"name": "GET update street",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/street-update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"street-update",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 22 Jun 2023 23:41:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <meta charset=\"UTF-8\">\n    <title>Create street</title>\n</head>\n<body>\n    <form action=\"/street-update\" method=\"post\">\n        <label for=\"id\">ID</label>\n        <input readonly type=\"number\" id=\"id\" placeholder=\"ID\" name=\"id\" value=\"2\">\n        <br/>\n        <label for=\"name\">Name</label>\n        <input type=\"text\" id=\"name\" placeholder=\"Name\" name=\"name\" value=\"1\">\n        <br/>\n        <label for=\"length\">Length</label>\n        <input type=\"number\" id=\"length\" placeholder=\"Length\" name=\"length\" value=\"1\">\n        <br/>\n        <label for=\"isNarrow\">isNarrow</label>\n        <input type=\"text\" id=\"isNarrow\" placeholder=\"Is narrow\" name=\"isNarrow\" value=\"true\">\n        <br/>\n        <label for=\"isNoisy\">isNoisy</label>\n        <input type=\"text\" id=\"isNoisy\" placeholder=\"Is noisy\" name=\"isNoisy\" value=\"true\">\n        <br/>\n        <label for=\"distanceFromMetro\">distanceFromMetro</label>\n        <input type=\"number\" id=\"distanceFromMetro\" placeholder=\"distanceFromMetro\" name=\"distanceFromMetro\" value=\"1\">\n        <br/>\n        <input type=\"submit\" value=\"Update Street\">\r\n\n    </form>\n</body>\n</html>"
+				},
+				{
+					"name": "GET create street",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/street-create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"street-create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 22 Jun 2023 23:44:16 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Create street</title>\n    </head>\n    <body>\n        <form action=\"/street-create\" method=\"post\">\n            <label for=\"name\">Name</label>\n            <input type=\"text\" id=\"name\" placeholder=\"Name\" name=\"name\" value=\"\">\n            <label for=\"length\">Length</label>\n            <input type=\"text\" id=\"length\" placeholder=\"Length\" name=\"length\" value=\"\">\n            <label for=\"isNarrow\">isNarrow</label>\n            <input type=\"text\" id=\"isNarrow\" placeholder=\"Is narrow\" name=\"isNarrow\" value=\"\">\n            <label for=\"isNoisy\">isNoisy</label>\n            <input type=\"text\" id=\"isNoisy\" placeholder=\"Is noisy\" name=\"isNoisy\" value=\"\">\n            <label for=\"distanceFromMetro\">distanceFromMetro</label>\n            <input type=\"text\" id=\"distanceFromMetro\" placeholder=\"distanceFromMetro\" name=\"distanceFromMetro\" value=\"\">\n            <input type=\"submit\" value=\"Create Street\">\r\n\n        </form>\n    </body>\n</html>"
+				},
+				{
+					"name": "GET delete street",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/street-delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"street-delete",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 22 Jun 2023 23:46:25 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Streets</title>\n    </head>\n    <body>\n        <div>\n            <div>\n                <h2>Streets</h2>\n                <table>\n                    <thead>\n                        <tr>\n                            <th>Name</th>\n                            <th>Length</th>\n                            <th>Is narrow</th>\n                            <th>Is noisy</th>\n                            <th>Distance from metro</th>\n                        </tr>\n                    </thead>\n                    <tbody>\r\n      \r\n      </tbody>\n                </table>\n            </div>\n            <p>\n                <a href=\"/street-create\">Create street</a>\n            </p>\n        </div>\n    </body>\n</html>"
+				},
+				{
+					"name": "POST update street",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/street-update?id=4&name=1&length=2&isNarrow=true&isNoisy=true&distanceFromMetro=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"street-update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								},
+								{
+									"key": "name",
+									"value": "1"
+								},
+								{
+									"key": "length",
+									"value": "2"
+								},
+								{
+									"key": "isNarrow",
+									"value": "true"
+								},
+								{
+									"key": "isNoisy",
+									"value": "true"
+								},
+								{
+									"key": "distanceFromMetro",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Jun 2023 00:11:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Streets</title>\n    </head>\n    <body>\n        <div>\n            <div>\n                <h2>Streets</h2>\n                <table>\n                    <thead>\n                        <tr>\n                            <th>Name</th>\n                            <th>Length</th>\n                            <th>Is narrow</th>\n                            <th>Is noisy</th>\n                            <th>Distance from metro</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>3</td>\n                            <td>1</td>\n                            <td>2</td>\n                            <td>true</td>\n                            <td>true</td>\n                            <td>5</td>\n                            <td>\n                                <a href=\"street-update/3\">Edit</a>\n                            </td>\n                            <td>\n                                <a href=\"street-delete/3\">Delete</a>\n                            </td>\n                        </tr>\n                        <tr>\n                            <td>4</td>\n                            <td>1</td>\n                            <td>2</td>\n                            <td>true</td>\n                            <td>true</td>\n                            <td>20</td>\n                            <td>\n                                <a href=\"street-update/4\">Edit</a>\n                            </td>\n                            <td>\n                                <a href=\"street-delete/4\">Delete</a>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n            <p>\n                <a href=\"/street-create\">Create street</a>\n            </p>\n        </div>\n    </body>\n</html>"
+				},
+				{
+					"name": "POST create street",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/street-create?name=1&length=2&isNarrow=true&isNoisy=true&distanceFromMetro=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"street-create"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "1"
+								},
+								{
+									"key": "length",
+									"value": "2"
+								},
+								{
+									"key": "isNarrow",
+									"value": "true"
+								},
+								{
+									"key": "isNoisy",
+									"value": "true"
+								},
+								{
+									"key": "distanceFromMetro",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Jun 2023 00:13:56 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Streets</title>\n    </head>\n    <body>\n        <div>\n            <div>\n                <h2>Streets</h2>\n                <table>\n                    <thead>\n                        <tr>\n                            <th>Name</th>\n                            <th>Length</th>\n                            <th>Is narrow</th>\n                            <th>Is noisy</th>\n                            <th>Distance from metro</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>3</td>\n                            <td>1</td>\n                            <td>2</td>\n                            <td>true</td>\n                            <td>true</td>\n                            <td>5</td>\n                            <td>\n                                <a href=\"street-update/3\">Edit</a>\n                            </td>\n                            <td>\n                                <a href=\"street-delete/3\">Delete</a>\n                            </td>\n                        </tr>\n                        <tr>\n                            <td>4</td>\n                            <td>1</td>\n                            <td>2</td>\n                            <td>true</td>\n                            <td>true</td>\n                            <td>20</td>\n                            <td>\n                                <a href=\"street-update/4\">Edit</a>\n                            </td>\n                            <td>\n                                <a href=\"street-delete/4\">Delete</a>\n                            </td>\n                        </tr>\n                        <tr>\n                            <td>5</td>\n                            <td>1</td>\n                            <td>2</td>\n                            <td>true</td>\n                            <td>true</td>\n                            <td>20</td>\n                            <td>\n                                <a href=\"street-update/5\">Edit</a>\n                            </td>\n                            <td>\n                                <a href=\"street-delete/5\">Delete</a>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n            <p>\n                <a href=\"/street-create\">Create street</a>\n            </p>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "House",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "GET get list of houses",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "GET create house",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/house-create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"house-create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Jun 2023 00:16:00 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Create house</title>\n    </head>\n    <body>\n        <form action=\"/house-create\" method=\"post\">\n            <label for=\"numberOfFloors\">numberOfFloors</label>\n            <input type=\"text\" id=\"numberOfFloors\" placeholder=\"numberOfFloors\" name=\"numberOfFloors\" value=\"\">\n            <label for=\"numberOfEntrances\">numberOfEntrances</label>\n            <input type=\"text\" id=\"numberOfEntrances\" placeholder=\"numberOfEntrances\" name=\"numberOfEntrances\" value=\"\">\n            <label for=\"material\">material</label>\n            <input type=\"text\" id=\"material\" placeholder=\"material\" name=\"material\" value=\"\">\n            <label for=\"color\">color</label>\n            <input type=\"text\" id=\"color\" placeholder=\"color\" name=\"color\" value=\"\">\n            <label for=\"houseCondition\">houseCondition</label>\n            <input type=\"text\" id=\"houseCondition\" placeholder=\"houseCondition\" name=\"houseCondition\" value=\"\">\n            <label for=\"streetId\">streetId</label>\n            <input type=\"text\" id=\"streetId\" placeholder=\"streetId\" name=\"streetId\" value=\"\">\n            <input type=\"submit\" value=\"Create House\">\r\n\n        </form>\n    </body>\n</html>"
+				},
+				{
+					"name": "GET update house",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/house-update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"house-update",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Jun 2023 00:16:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <meta charset=\"UTF-8\">\n    <title>Create house</title>\n</head>\n<body>\n    <form action=\"/house-update\" method=\"post\">\n        <label for=\"id\">ID</label>\n        <input readonly type=\"number\" id=\"id\" placeholder=\"ID\" name=\"id\" value=\"2\">\n        <br/>\n        <label for=\"numberOfFloors\">numberOfFloors</label>\n        <input type=\"text\" id=\"numberOfFloors\" placeholder=\"numberOfFloors\" name=\"numberOfFloors\" value=\"1\">\n        <br/>\n        <label for=\"numberOfEntrances\">numberOfEntrances</label>\n        <input type=\"text\" id=\"numberOfEntrances\" placeholder=\"numberOfEntrances\" name=\"numberOfEntrances\" value=\"1\">\n        <br/>\n        <label for=\"material\">material</label>\n        <input type=\"text\" id=\"material\" placeholder=\"material\" name=\"material\" value=\"true\">\n        <br/>\n        <label for=\"color\">color</label>\n        <input type=\"text\" id=\"color\" placeholder=\"color\" name=\"color\" value=\"true\">\n        <br/>\n        <label for=\"houseCondition\">houseCondition</label>\n        <input type=\"text\" id=\"houseCondition\" placeholder=\"houseCondition\" name=\"houseCondition\" value=\"1\">\n        <br/>\n        <label for=\"streetId\">streetId</label>\n        <input type=\"number\" id=\"streetId\" placeholder=\"streetId\" name=\"streetId\" value=\"\">\n        <br/>\n        <input type=\"submit\" value=\"Update User\">\r\n\n    </form>\n</body>\n</html>"
+				},
+				{
+					"name": "GET delete house",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/house-delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"house-delete",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Jun 2023 00:17:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Houses</title>\n    </head>\n    <body>\n        <div>\n            <div>\n                <h2>Houses</h2>\n                <table>\n                    <thead>\n                        <tr>\n                            <th>Id</th>\n                            <th>numberOfFloors</th>\n                            <th>numberOfEntrances</th>\n                            <th>material</th>\n                            <th>color</th>\n                            <th>houseCondition</th>\n                            <th>streetId</th>\n                        </tr>\n                    </thead>\n                    <tbody>\r\n      \r\n      </tbody>\n                </table>\n            </div>\n            <p>\n                <a href=\"/house-create\">Create house</a>\n            </p>\n        </div>\n    </body>\n</html>"
+				},
+				{
+					"name": "POST create house",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/house-create?numberOfFloors=1&numberOfEntrances=2&material=1&color=1&houseCondition=1&streetId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"house-create"
+							],
+							"query": [
+								{
+									"key": "numberOfFloors",
+									"value": "1"
+								},
+								{
+									"key": "numberOfEntrances",
+									"value": "2"
+								},
+								{
+									"key": "material",
+									"value": "1"
+								},
+								{
+									"key": "color",
+									"value": "1"
+								},
+								{
+									"key": "houseCondition",
+									"value": "1"
+								},
+								{
+									"key": "streetId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Jun 2023 00:18:51 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Houses</title>\n    </head>\n    <body>\n        <div>\n            <div>\n                <h2>Houses</h2>\n                <table>\n                    <thead>\n                        <tr>\n                            <th>Id</th>\n                            <th>numberOfFloors</th>\n                            <th>numberOfEntrances</th>\n                            <th>material</th>\n                            <th>color</th>\n                            <th>houseCondition</th>\n                            <th>streetId</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>3</td>\n                            <td>1</td>\n                            <td>2</td>\n                            <td>true</td>\n                            <td>true</td>\n                            <td>1</td>\n                            <td></td>\n                            <td>\n                                <a href=\"house-update/3\">Edit</a>\n                            </td>\n                            <td>\n                                <a href=\"house-delete/3\">Delete</a>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n            <p>\n                <a href=\"/house-create\">Create house</a>\n            </p>\n        </div>\n    </body>\n</html>"
+				},
+				{
+					"name": "POST update house",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/house-update?id=4&numberOfFloors=1&numberOfEntrances=2&material=1&color=1&houseCondition=1&streetId=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"house-update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								},
+								{
+									"key": "numberOfFloors",
+									"value": "1"
+								},
+								{
+									"key": "numberOfEntrances",
+									"value": "2"
+								},
+								{
+									"key": "material",
+									"value": "1"
+								},
+								{
+									"key": "color",
+									"value": "1"
+								},
+								{
+									"key": "houseCondition",
+									"value": "1"
+								},
+								{
+									"key": "streetId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Jun 2023 00:23:00 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Houses</title>\n    </head>\n    <body>\n        <div>\n            <div>\n                <h2>Houses</h2>\n                <table>\n                    <thead>\n                        <tr>\n                            <th>Id</th>\n                            <th>numberOfFloors</th>\n                            <th>numberOfEntrances</th>\n                            <th>material</th>\n                            <th>color</th>\n                            <th>houseCondition</th>\n                            <th>streetId</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>4</td>\n                            <td>1</td>\n                            <td>2</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td>Street(id=3, name=1, length=2, isNarrow=true, isNoisy=true, distanceFromMetro=5)</td>\n                            <td>\n                                <a href=\"house-update/4\">Edit</a>\n                            </td>\n                            <td>\n                                <a href=\"house-delete/4\">Delete</a>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n            <p>\n                <a href=\"/house-create\">Create house</a>\n            </p>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Flat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "GET list of flats",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/flats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flats"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Jun 2023 00:23:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Flats</title>\n    </head>\n    <body>\n        <div>\n            <div>\n                <h2>Flats</h2>\n                <table>\n                    <thead>\n                        <tr>\n                            <th>Id</th>\n                            <th>numberOfRooms</th>\n                            <th>floor</th>\n                            <th>price</th>\n                            <th>ceilingHeight</th>\n                            <th>apartmentArea</th>\n                            <th>houseId</th>\n                        </tr>\n                    </thead>\n                    <tbody>\r\n      \r\n      </tbody>\n                </table>\n            </div>\n            <p>\n                <a href=\"/flat-create\">Create flat</a>\n            </p>\n        </div>\n    </body>\n</html>"
+				},
+				{
+					"name": "GET create",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/flat-create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flat-create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Jun 2023 00:24:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Create flat</title>\n    </head>\n    <body>\n        <form action=\"/flat-create\" method=\"post\">\n            <label for=\"numberOfRooms\">numberOfRooms</label>\n            <input type=\"text\" id=\"numberOfRooms\" placeholder=\"numberOfRooms\" name=\"numberOfRooms\" value=\"\">\n            <label for=\"floor\">floor</label>\n            <input type=\"text\" id=\"floor\" placeholder=\"floor\" name=\"floor\" value=\"\">\n            <label for=\"price\">price</label>\n            <input type=\"text\" id=\"price\" placeholder=\"price\" name=\"price\" value=\"\">\n            <label for=\"ceilingHeight\">ceilingHeight</label>\n            <input type=\"text\" id=\"ceilingHeight\" placeholder=\"ceilingHeight\" name=\"ceilingHeight\" value=\"\">\n            <label for=\"apartmentArea\">apartmentArea</label>\n            <input type=\"text\" id=\"apartmentArea\" placeholder=\"apartmentArea\" name=\"apartmentArea\" value=\"\">\n            <label for=\"houseId\">houseId</label>\n            <input type=\"text\" id=\"houseId\" placeholder=\"houseId\" name=\"houseId\" value=\"\">\n            <input type=\"submit\" value=\"Create Flat\">\r\n\n        </form>\n    </body>\n</html>"
+				},
+				{
+					"name": "GET update",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/flat-update/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flat-update",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Jun 2023 00:24:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <meta charset=\"UTF-8\">\n    <title>Create flat</title>\n</head>\n<body>\n    <form action=\"/flat-update\" method=\"post\">\n        <label for=\"id\">ID</label>\n        <input readonly type=\"number\" id=\"id\" placeholder=\"ID\" name=\"id\" value=\"2\">\n        <br/>\n        <label for=\"numberOfRooms\">numberOfRooms</label>\n        <input type=\"text\" id=\"numberOfRooms\" placeholder=\"numberOfRooms\" name=\"numberOfRooms\" value=\"1\">\n        <br/>\n        <label for=\"floor\">floor</label>\n        <input type=\"text\" id=\"floor\" placeholder=\"floor\" name=\"floor\" value=\"1\">\n        <br/>\n        <label for=\"price\">price</label>\n        <input type=\"text\" id=\"price\" placeholder=\"price\" name=\"price\" value=\"1\">\n        <br/>\n        <label for=\"ceilingHeight\">ceilingHeight</label>\n        <input type=\"text\" id=\"ceilingHeight\" placeholder=\"ceilingHeight\" name=\"ceilingHeight\" value=\"1\">\n        <br/>\n        <label for=\"apartmentArea\">apartmentArea</label>\n        <input type=\"text\" id=\"apartmentArea\" placeholder=\"apartmentArea\" name=\"apartmentArea\" value=\"1\">\n        <br/>\n        <label for=\"houseId\">houseId</label>\n        <input type=\"text\" id=\"houseId\" placeholder=\"houseId\" name=\"houseId\" value=\"\">\n        <br/>\n        <input type=\"submit\" value=\"Update Flat\">\r\n\n    </form>\n</body>\n</html>"
+				},
+				{
+					"name": "Get delete",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/flat-delete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flat-delete",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Jun 2023 00:25:21 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Flats</title>\n    </head>\n    <body>\n        <div>\n            <div>\n                <h2>Flats</h2>\n                <table>\n                    <thead>\n                        <tr>\n                            <th>Id</th>\n                            <th>numberOfRooms</th>\n                            <th>floor</th>\n                            <th>price</th>\n                            <th>ceilingHeight</th>\n                            <th>apartmentArea</th>\n                            <th>houseId</th>\n                        </tr>\n                    </thead>\n                    <tbody>\r\n      \r\n      </tbody>\n                </table>\n            </div>\n            <p>\n                <a href=\"/flat-create\">Create flat</a>\n            </p>\n        </div>\n    </body>\n</html>"
+				},
+				{
+					"name": "POST create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/flat-create?numberOfRooms=1&floor=1&price=1&ceilingHeight=1&apartmentArea=1&houseId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flat-create"
+							],
+							"query": [
+								{
+									"key": "numberOfRooms",
+									"value": "1"
+								},
+								{
+									"key": "floor",
+									"value": "1"
+								},
+								{
+									"key": "price",
+									"value": "1"
+								},
+								{
+									"key": "ceilingHeight",
+									"value": "1"
+								},
+								{
+									"key": "apartmentArea",
+									"value": "1"
+								},
+								{
+									"key": "houseId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Jun 2023 00:26:45 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Flats</title>\n    </head>\n    <body>\n        <div>\n            <div>\n                <h2>Flats</h2>\n                <table>\n                    <thead>\n                        <tr>\n                            <th>Id</th>\n                            <th>numberOfRooms</th>\n                            <th>floor</th>\n                            <th>price</th>\n                            <th>ceilingHeight</th>\n                            <th>apartmentArea</th>\n                            <th>houseId</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>3</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td></td>\n                            <td>\n                                <a href=\"flat-update/3\">Edit</a>\n                            </td>\n                            <td>\n                                <a href=\"flat-delete/3\">Delete</a>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n            <p>\n                <a href=\"/flat-create\">Create flat</a>\n            </p>\n        </div>\n    </body>\n</html>"
+				},
+				{
+					"name": "POST update",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/flat-update?id=1&numberOfRooms=1&floor=1&price=1&ceilingHeight=1&apartmentArea=1&houseId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flat-update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "numberOfRooms",
+									"value": "1"
+								},
+								{
+									"key": "floor",
+									"value": "1"
+								},
+								{
+									"key": "price",
+									"value": "1"
+								},
+								{
+									"key": "ceilingHeight",
+									"value": "1"
+								},
+								{
+									"key": "apartmentArea",
+									"value": "1"
+								},
+								{
+									"key": "houseId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html;charset=UTF-8"
+						},
+						{
+							"key": "Content-Language",
+							"value": "ru-RU"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 23 Jun 2023 00:28:08 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <title>Flats</title>\n    </head>\n    <body>\n        <div>\n            <div>\n                <h2>Flats</h2>\n                <table>\n                    <thead>\n                        <tr>\n                            <th>Id</th>\n                            <th>numberOfRooms</th>\n                            <th>floor</th>\n                            <th>price</th>\n                            <th>ceilingHeight</th>\n                            <th>apartmentArea</th>\n                            <th>houseId</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr>\n                            <td>3</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td></td>\n                            <td>\n                                <a href=\"flat-update/3\">Edit</a>\n                            </td>\n                            <td>\n                                <a href=\"flat-delete/3\">Delete</a>\n                            </td>\n                        </tr>\n                        <tr>\n                            <td>4</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td>1</td>\n                            <td></td>\n                            <td>\n                                <a href=\"flat-update/4\">Edit</a>\n                            </td>\n                            <td>\n                                <a href=\"flat-delete/4\">Delete</a>\n                            </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n            <p>\n                <a href=\"/flat-create\">Create flat</a>\n            </p>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Streets</title>
+</head>
+<body>
+<div th:switch="${streets}">
+  <h2 th:case="null">No streets found!</h2>
+  <div th:case="*">
+    <h2>Streets</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Length</th>
+        <th>Is narrow</th>
+        <th>Is noisy</th>
+        <th>Distance from metro</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="street : ${streets}">
+        <td th:text="${street.id}"></td>
+        <td th:text="${street.name}"></td>
+        <td th:text="${street.length}"></td>
+        <td th:text="${street.isNarrow}"></td>
+        <td th:text="${street.isNoisy}"></td>
+        <td th:text="${street.distanceFromMetro}"></td>
+
+        <td><a th:href="@{street-update/{id}(id=${street.id})}">Edit</a></td>
+        <td><a th:href="@{street-delete/{id}(id=${street.id})}">Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><a href="/street-create">Create street</a></p>
+</div>
+</body>
+</html>

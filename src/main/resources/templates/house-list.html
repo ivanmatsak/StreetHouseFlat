@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Houses</title>
+</head>
+<body>
+<div th:switch="${houses}">
+  <h2 th:case="null">No houses found!</h2>
+  <div th:case="*">
+    <h2>Houses</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>numberOfFloors</th>
+        <th>numberOfEntrances</th>
+        <th>material</th>
+        <th>color</th>
+        <th>houseCondition</th>
+        <th>streetId</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="house : ${houses}">
+        <td th:text="${house.id}"></td>
+        <td th:text="${house.numberOfFloors}"></td>
+        <td th:text="${house.numberOfEntrances}"></td>
+        <td th:text="${house.material}"></td>
+        <td th:text="${house.color}"></td>
+        <td th:text="${house.houseCondition}"></td>
+        <td th:text="${house.streetId}"></td>
+
+        <td><a th:href="@{house-update/{id}(id=${house.id})}">Edit</a></td>
+        <td><a th:href="@{house-delete/{id}(id=${house.id})}">Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><a href="/house-create">Create house</a></p>
+</div>
+</body>
+</html>
